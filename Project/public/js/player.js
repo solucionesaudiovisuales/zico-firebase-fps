@@ -4,7 +4,7 @@ var Player = function( playerID ) {
 	this.mesh;
 
 	var cube_geometry = new THREE.BoxGeometry( 1, 1, 1 );
-	var cube_material = new THREE.MeshBasicMaterial( {color: 0x7777ff, wireframe: false} );
+	var cube_material = new THREE.MeshBasicMaterial( {color: 0x7777ff, wireframe: true} );
 
 	var scope = this;
 
