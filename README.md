@@ -1,5 +1,7 @@
-# Firebase and Three.js multiplayer game template
+# Chalas Zico FPS
 
-###Demo: https://mptemplate1.firebaseapp.com
+###https://chalaszico-f8434.firebaseapp.com/
 
-###Tutorial: https://youtube.com/PiusNyakoojo
+# How to run locally
+	sudo npm install http-server -g
+	http-server -o --cors
