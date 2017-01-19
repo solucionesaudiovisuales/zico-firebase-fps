@@ -1,6 +1,8 @@
-var container, scene, camera, renderer;
+var container, scene, camera, renderer, clock, mixer;
 
 var controls;
+var loader = new THREE.JSONLoader();
+var textureLoader = new THREE.TextureLoader();
 
 init();
 animate();
@@ -14,8 +16,10 @@ function init() {
 	camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 1000 );
 	camera.position.z = 5;
 
-	renderer = new THREE.WebGLRenderer( { alpha: true} );
+	renderer = new THREE.WebGLRenderer( { alpha: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight);
+
+	clock = new THREE.Clock();
 
 
 	// Load game world
@@ -66,7 +70,6 @@ function animate() {
 }
 
 function render() {
-
 	renderer.clear();
 	renderer.render( scene, camera );
 }

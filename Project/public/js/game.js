@@ -4,6 +4,7 @@ var playerID;
 var player;
 
 function loadGame() {
+
 	// load the environment
 	loadEnvironment();
 	// load the player
@@ -65,12 +66,14 @@ function initMainPlayer() {
 }
 
 function loadEnvironment() {
-	var sphere_geometry = new THREE.SphereGeometry( 1 );
-	var sphere_material = new THREE.MeshNormalMaterial();
-	var sphere = new THREE.Mesh( sphere_geometry, sphere_material );
+	// BOLA
+	// var sphere_geometry = new THREE.SphereGeometry( 1 );
+	// var sphere_material = new THREE.MeshNormalMaterial();
+	// var sphere = new THREE.Mesh( sphere_geometry, sphere_material );
 
-	scene.add( sphere );
+	// scene.add( sphere );
 
+	// LUZ DE DIA
 	var hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
     hemiLight.color.setHSL( 0.6, 0.75, 0.5 );
     hemiLight.groundColor.setHSL( 0.095, 0.5, 0.5 );
@@ -98,4 +101,13 @@ function loadEnvironment() {
     dirLight.shadowCameraFar = 3500;
     dirLight.shadowBias = -0.0001;
     dirLight.shadowDarkness = 0.35;
+
+    // SUELO
+    textureLoader.load('textures/ground.png', function (texture) {
+		var geometry = new THREE.PlaneBufferGeometry(12, 12);
+		geometry.rotateX(-Math.PI / 2);
+		var material = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
+		ground = new THREE.Mesh(geometry, material);
+		scene.add(ground);
+	});
 }
