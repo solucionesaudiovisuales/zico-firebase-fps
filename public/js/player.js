@@ -38,7 +38,7 @@ var Player = function( playerID ) {
 			});
 
 			// geometry.center();
-			geometry.rotateY(180);
+			// geometry.rotateY(180);
 
 			scope.character = new THREE.SkinnedMesh(
 			  geometry,
