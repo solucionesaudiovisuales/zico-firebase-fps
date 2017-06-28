@@ -139,10 +139,10 @@ THREE.PlayerControls = function ( camera, player, domElement ) {
 		this.camera.position.z = this.player.position.x + 2;
 
 		this.camera.lookAt( this.player.position );
-		
+
 	};
 
-	this.update = function() { 
+	this.update = function() {
 
 		this.checkKeyStates();
 
@@ -302,7 +302,7 @@ THREE.PlayerControls = function ( camera, player, domElement ) {
 	    });
 	};
 
-	function getAutoRotationAngle() { 
+	function getAutoRotationAngle() {
 
 		return 2 * Math.PI / 60 / 60 * scope.autoRotateSpeed;
 

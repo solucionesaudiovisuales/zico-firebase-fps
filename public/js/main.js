@@ -1,6 +1,12 @@
 var container, scene, camera, renderer, clock, mixer;
-
+var mixers = [];
 var controls;
+
+// model fbx loaders
+// var manager = new THREE.LoadingManager();
+var fbx_loader = new THREE.FBXLoader();
+
+//default loaders
 var loader = new THREE.JSONLoader();
 var textureLoader = new THREE.TextureLoader();
 
